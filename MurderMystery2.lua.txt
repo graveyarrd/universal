@@ -173,10 +173,10 @@ if not getgenv().TransparencyEnabled then
     getgenv().TransparencyEnabled = false
 end
 
-SendNexoraNotification("Eliana Hub", "Toggle Keybind: ( R )", 30, "rbxassetid://89804924525665")
+SendNexoraNotification("Hellbound", "Toggle Keybind: ( R )", 30, "rbxassetid://89804924525665")
 
 local MainWindow = WindUI:CreateWindow({
-    ["Title"] = "Eliana Hub",
+    ["Title"] = "Hellbound",
     ["Icon"] = "zap",
     ["Author"] = "OP KEYLESS",
     ["Folder"] = "Project Nexora",
@@ -226,7 +226,7 @@ end
 loadstring(game:HttpGet("https://pastefy.app/hcVkWhQF/raw"))()
 
 MainWindow:EditOpenButton({
-    ["Title"] = "Eliana Hub",
+    ["Title"] = "Hellbound",
     ["CornerRadius"] = UDim.new(0, 6),
     ["StrokeThickness"] = 2,
     ["Color"] = ColorSequence.new(Color3.fromRGB(30, 30, 30), Color3.fromRGB(255, 255, 255)),
@@ -240,49 +240,49 @@ local Tabs = {}
 Tabs.Main = MainWindow:Tab({
     ["Title"] = "Main",
     ["Icon"] = "eye",
-    ["Desc"] = "Eliana Hub"
+    ["Desc"] = "Hellbound Hub"
 })
 
 Tabs.Misc = MainWindow:Tab({
     ["Title"] = "Misc",
     ["Icon"] = "sparkles",
-    ["Desc"] = "Eliana Hub"
+    ["Desc"] = "Hellbound Hub"
 })
 
 Tabs.ESP = MainWindow:Tab({
     ["Title"] = "ESP",
     ["Icon"] = "eye",
-    ["Desc"] = "Eliana Hub"
+    ["Desc"] = "Hellbound Hub"
 })
 
 Tabs.Farm = MainWindow:Tab({
     ["Title"] = "Farm",
     ["Icon"] = "wrench",
-    ["Desc"] = "Eliana Hub"
+    ["Desc"] = "Hellbound Hub"
 })
 
 Tabs.Place = MainWindow:Tab({
     ["Title"] = "Teleport",
     ["Icon"] = "map",
-    ["Desc"] = "Eliana Hub"
+    ["Desc"] = "Hellbound Hub"
 })
 
 Tabs.Fling = MainWindow:Tab({
     ["Title"] = "Fling",
     ["Icon"] = "user",
-    ["Desc"] = "Eliana Hub"
+    ["Desc"] = "Hellbound Hub"
 })
 
 Tabs.Info = MainWindow:Tab({
     ["Title"] = "Information",
     ["Icon"] = "badge-info",
-    ["Desc"] = "Eliana Hub"
+    ["Desc"] = "Hellbound Hub"
 })
 
 Tabs.Manager = MainWindow:Tab({
     ["Title"] = "Quick Buttons",
     ["Icon"] = "solar:widget-bold",
-    ["Desc"] = "Eliana Hub"
+    ["Desc"] = "Hellbound Hub"
 })
 
 MainWindow:SelectTab(7)
