@@ -4349,7 +4349,7 @@ Info:Section({
 })
 
 Info:Paragraph({
-    ["Title"] = "Nexora Hub TikTok",
+    ["Title"] = "Hellbound Hub TikTok",
     ["Desc"] = "Follow us for the latest script updates and short showcases.",
     ["Image"] = "rbxassetid://134384554225463",
     ["Buttons"] = {
