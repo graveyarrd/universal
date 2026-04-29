@@ -1,0 +1,47 @@
+-- Credits to thatsnotmatt#2602
+getgenv().keytoclick = "Q"
+
+-- GUI creation (smaller size, changed button text, transparent background)
+local HELLBOUND = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local TextButton = Instance.new("TextButton")
+local UICorner_2 = Instance.new("UICorner")
+
+HELLBOUND.Name = "HELLBOUND"
+HELLBOUND.Parent = game.CoreGui
+HELLBOUND.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = HELLBOUND
+Frame.BackgroundTransparency = 1  -- Make the frame background transparent
+Frame.Size = UDim2.new(0, 150, 0, 40)  -- Smaller size for the frame
+Frame.Active = true
+Frame.Draggable = true
+
+-- Define the logo's approximate position (top-left corner of the screen)
+local logoHeight = 40  -- Approximate height of the Roblox logo (may vary)
+local topOffset = 8  -- Small gap below the logo, adjusted slightly higher by 2 pixels
+
+-- Position the GUI more towards the left side of the screen, just below the logo
+Frame.Position = UDim2.new(0, 10, 0, logoHeight + topOffset)  -- X offset of 10 pixels from the left edge
+
+-- Configure and position the button (smaller size, transparent background, purple text)
+TextButton.Parent = Frame
+TextButton.BackgroundTransparency = 1  -- Make the button background transparent
+TextButton.Position = UDim2.new(0.1, 0, 0.1, 0)  -- Smaller button position
+TextButton.Size = UDim2.new(0.8, 0, 0.8, 0)  -- Smaller button size
+TextButton.Font = Enum.Font.Fantasy
+TextButton.Text = "Toggle Gui"  -- Updated button text
+TextButton.TextColor3 = Color3.fromRGB(128, 0, 128)  -- Purple text color
+TextButton.TextScaled = true
+TextButton.TextWrapped = true
+
+UICorner.Parent = Frame
+UICorner_2.Parent = TextButton
+
+-- Simulate the Right Control key press when the button is clicked
+TextButton.MouseButton1Click:Connect(function()
+    -- Activate the RightControl key action
+    local vim = game:service("VirtualInputManager")
+    vim:SendKeyEvent(true, Enum.KeyCode.Q, false, game)
+end)
