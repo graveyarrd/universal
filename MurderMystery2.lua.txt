@@ -4358,7 +4358,7 @@ Info:Paragraph({
             ["Icon"] = "link",
             ["Variant"] = "Primary",
             ["Callback"] = function()
-                setclipboard("https://www.tiktok.com/@nexora.hub.nds")
+                setclipboard("https://www.tiktok.com/@scarsxgrave?_r=1&_t=ZS-95wGA1zYXtV")
                 WindUI:Notify({
                     ["Title"] = "TikTok Link Copied",
                     ["Content"] = "Successfully saved to clipboard!",
