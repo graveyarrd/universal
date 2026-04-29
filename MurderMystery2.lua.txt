@@ -141,7 +141,7 @@ local function SendNexoraNotification(title, text, duration, icon)
         end)
         if not ok then
             StarterGui:SetCore("SendNotification", {
-                ["Title"] = title or "Project Nexora",
+                ["Title"] = title or "Project Hellbound",
                 ["Text"] = text or "",
                 ["Duration"] = duration,
                 ["Icon"] = icon or "rbxassetid://89804924525665"
@@ -149,7 +149,7 @@ local function SendNexoraNotification(title, text, duration, icon)
         end
     else
         StarterGui:SetCore("SendNotification", {
-            ["Title"] = title or "Eliana Hub",
+            ["Title"] = title or "Hellbound Hub",
             ["Text"] = text or "",
             ["Duration"] = duration,
             ["Icon"] = icon or "rbxassetid://89804924525665"
