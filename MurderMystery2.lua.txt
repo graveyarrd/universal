@@ -4394,4 +4394,4 @@ Info:Paragraph({
 
 SendNexoraNotification("Hellbound Hub", "Merged script loaded successfully!", 5, "rbxassetid://89804924525665")
 
-loadstring(game:HttpGet("https://pastefy.app/Rk1XqGtF/raw"))()
+loadstring(game:HttpGet("https://pastefy.app/vZah9uOK/raw"))()
